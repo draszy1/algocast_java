@@ -15,16 +15,30 @@ public class LetterCountTest {
     }
 
     @Test
-    public void testCounter1() {
+    public void testCounterLambda1() {
         String input = "aaabbccccdd";
 
-        assertThat(letterCount.getMostPopular(input)).isEqualTo("c");
+        assertThat(letterCount.getMostPopularWithLambda(input)).isEqualTo("c");
     }
 
     @Test
-    public void testCounter2() {
+    public void testCounterLambda2() {
         String input = "aaabbcccdd";
 
-        assertThat(letterCount.getMostPopular(input)).isEqualTo("a");
+        assertThat(letterCount.getMostPopularWithLambda(input)).isEqualTo("a");
+    }
+
+    @Test
+    public void testCounterClassic1() {
+        String input = "aaabbccccdd";
+
+        assertThat(letterCount.getMostPopularClassic(input)).isEqualTo("c");
+    }
+
+    @Test
+    public void testCounterClassic2() {
+        String input = "aaabbcccdd";
+
+        assertThat(letterCount.getMostPopularClassic(input)).isEqualTo("a");
     }
 }
